@@ -5,6 +5,19 @@
 * PostgreSQL installed and database created
 * substitution of all environment variables (see `config.env.example` file)
 
+## Feature flags
+
+List of feature flags:
+
+| Feature Flag                            | Bahaviour                                                                                                                                                |
+|-----------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `FF_EMAIL_TO_UNIVERSITY_DOMAIN_ENABLED` | `false` - e-mails which contains the domain defined in the variable `EMAIL_UNIVERSITY_DOMAIN` are not sent<br/> `true` - emails are sent to users always |
+| `FF_LDAP_AUTHENTICATION_ENABLED`        | `false` - mock authaticantion is used<br/>`true` - real ldap is used for authentication    
+
+#### Secrets
+
+See `config.env.example` file.
+
 #### Authentication
 
 To use mocked ldap authentication:
@@ -18,14 +31,6 @@ Coordinator user has to be added manually to the database, to the `USER_DATA` ta
 COORDINATOR role assigned (table `USER_ROLES`)
 The coordinator user index number corresponds to the LDAP username.
 
-
-## How to run application using Docker:
-
-### Prerequisites
-
-#### Secrets
-
-See `config.env.example` file.
 
 #### Docker compose
 
