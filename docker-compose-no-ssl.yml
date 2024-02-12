@@ -8,7 +8,7 @@ services:
       - "8080:8080"
     environment:
       SPRING_PROFILES_ACTIVE: docker-dev
-      JWT_TOKEN: ${JWT_TOKEN}
+      JWT_SECRET: ${JWT_SECRET}
   ui:
     image: ghcr.io/system-pri/pri-ui-no-ssl:latest
     ports:

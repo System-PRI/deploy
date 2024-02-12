@@ -7,11 +7,10 @@ services:
     ports:
       - "8080:8080"
     environment:
-      SPRING_PROFILES_ACTIVE: docker-dev
-      JWT_TOKEN: ${JWT_TOKEN}
+      SPRING_PROFILES_ACTIVE: docker-prod
+      JWT_SECRET: ${JWT_SECRET}
   ui:
     image: ghcr.io/system-pri/pri-ui-ssl:latest
-    # TODO 11.02.2024: Add information about certificates to the readme
     volumes:
       - /etc/ssl:/etc/ssl
     ports:
