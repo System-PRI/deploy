@@ -47,7 +47,8 @@ On the other hand, `docker-compose-ssl.yml` uses `application-docker-prod.proper
 
 #### Certificates
 
-Place the SSL certificates in the `/etc/ssl` directory. The volume for certificates is created in the `docker-compose-ssl.yml` file.
+Place the SSL certificates in the `/etc/ssl` directory on the server, where the application is deployed. 
+The volume for certificates is created in the `docker-compose-ssl.yml` file.
 
 
 ### Starting the application
